@@ -1,0 +1,47 @@
+.card {
+    height: 350px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid white;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card.flipped > .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card > .card-inner > .card-image,
+.card > .card-inner > .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card > .card-inner > .card-image {
+    object-fit: cover;
+}
+
+.card > .card-inner > .card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    transform: rotateY(180deg);
+}
+
+.card > .card-inner > .card-back > .card-back-image {
+    height: 40%;
+    object-fit: contain;
+}

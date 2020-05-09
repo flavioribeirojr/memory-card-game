@@ -1,0 +1,38 @@
+.game-victory-message {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.game-victory-message > .game-victory-message-title {
+    font-family: "Open Sans";
+    color: white;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.game-victory-message > .game-victory-message-image {
+    height: 50%;
+    object-fit: cover;
+}
+
+.game-victory-message > .game-victory-message-button {
+    background-color: #f9ca24;
+    width: 250px;
+    height: 80px;
+    border: none;
+    border-radius: 4px;
+    font-size: 35px;
+    font-family: Roboto;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
